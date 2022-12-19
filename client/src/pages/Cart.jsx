@@ -9,6 +9,7 @@ import StripeCheckout from "react-stripe-checkout";
 import { useEffect, useState } from "react";
 import { userRequest } from "../requestMethods";
 import { useHistory } from "react-router";
+import { Link } from "react-router-dom";
 
 const KEY = process.env.REACT_APP_STRIPE;
 
@@ -161,6 +162,7 @@ const Button = styled.button`
 
 const Cart = () => {
   const cart = useSelector((state) => state.cart);
+  console.log("cart", cart);
   const [stripeToken, setStripeToken] = useState(null);
   const history = useHistory();
 
@@ -177,7 +179,8 @@ const Cart = () => {
         });
         history.push("/success", {
           stripeData: res.data,
-          products: cart, });
+          products: cart,
+        });
       } catch {}
     };
     stripeToken && makeRequest();
@@ -189,9 +192,11 @@ const Cart = () => {
       <Wrapper>
         <Title>YOUR BAG</Title>
         <Top>
-          <TopButton>CONTINUE SHOPPING</TopButton>
+          <Link to="/">
+            <TopButton>CONTINUE SHOPPING</TopButton>
+          </Link>
           <TopTexts>
-            <TopText>Shopping Bag(2)</TopText>
+            <TopText>Shopping Bag({cart.products.length})</TopText>
             <TopText>Your Wishlist (0)</TopText>
           </TopTexts>
           <TopButton type="filled">CHECKOUT NOW</TopButton>

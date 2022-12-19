@@ -69,7 +69,7 @@ const MenuItem = styled.div`
 `;
 
 const Navbar = () => {
-  const quantity = useSelector(state=>state.cart.quantity)
+  const quantity = useSelector((state) => state.cart.quantity);
   return (
     <Container>
       <Wrapper>
@@ -84,14 +84,18 @@ const Navbar = () => {
           <Logo>AlexTeam</Logo>
         </Center>
         <Right>
-          <MenuItem>REGISTER</MenuItem>
-          <MenuItem>SIGN IN</MenuItem>
+          <Link to="/register">
+            <MenuItem>REGISTER</MenuItem>
+          </Link>
+          <Link to="/login">
+            <MenuItem>SIGN IN</MenuItem>
+          </Link>
           <Link to="/cart">
-          <MenuItem>
-            <Badge badgeContent={quantity} color="primary">
-              <ShoppingCartOutlined />
-            </Badge>
-          </MenuItem>
+            <MenuItem>
+              <Badge badgeContent={quantity} color="primary">
+                <ShoppingCartOutlined />
+              </Badge>
+            </MenuItem>
           </Link>
         </Right>
       </Wrapper>

@@ -2,9 +2,10 @@ export const sliderItems = [
   {
     id: 1,
     img: "https://i.ibb.co/xgvm92Q/macbook-pro-13-c.png",
-    title: "MacBook Air M2 chip",
+    title: "MacBook Pro M2 chip",
     desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
     bg: "f5fafd",
+    _id: "63a07e4fa374ef7eeef10b38",
   },
   {
     id: 2,
@@ -19,7 +20,7 @@ export const sliderItems = [
     title: "Wireless Charger Stand with MagSafe",
     desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
     bg: "fbf0f4",
-  }, 
+  },
 ];
 
 export const categories = [
