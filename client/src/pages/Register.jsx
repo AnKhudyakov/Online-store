@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import { mobile } from "../responsive";
+import { useForm } from "react-hook-form";
+import { userRequest } from "../requestMethods";
 
 const Container = styled.div`
   width: 100vw;
@@ -54,22 +56,69 @@ const Button = styled.button`
 `;
 
 const Register = () => {
+  const {
+    register,
+    handleSubmit,
+    watch,
+    reset,
+    formState: { errors },
+  } = useForm();
+
+  const makeRequest = async (e) => {
+    try {
+      console.log(e);
+      const res = await userRequest.post("auth/register", {
+        username: e.username,
+        email: e.email,
+        password: e.password,
+      });
+      // history.push("/success", {
+      //   stripeData: res.data,
+      //   products: cart,
+      // });
+    } catch {}
+  };
+
   return (
     <Container>
       <Wrapper>
         <Title>CREATE AN ACCOUNT</Title>
-        <Form>
+        <Form onSubmit={handleSubmit(makeRequest)}>
           <Input placeholder="name" />
           <Input placeholder="last name" />
-          <Input placeholder="username" />
-          <Input placeholder="email" />
-          <Input placeholder="password" />
+          <Input
+            placeholder="username"
+            {...register("username", {
+              required: true,
+            })}
+          />
+          {errors.username && errors.username.type == "required" && (
+            <p>Please enter you username...</p>
+          )}
+          <Input
+            placeholder="email"
+            {...register("email", {
+              required: true,
+            })}
+          />
+          {errors.email && errors.email.type == "required" && (
+            <p>Please enter you email...</p>
+          )}
+          <Input
+            placeholder="password"
+            {...register("password", {
+              required: true,
+            })}
+          />
+          {errors.password && errors.password.type == "required" && (
+            <p>Please enter you email...</p>
+          )}
           <Input placeholder="confirm password" />
           <Agreement>
             By creating an account, I consent to the processing of my personal
             data in accordance with the <b>PRIVACY POLICY</b>
           </Agreement>
-          <Button>CREATE</Button>
+          <Button type="submit">CREATE</Button>
         </Form>
       </Wrapper>
     </Container>
