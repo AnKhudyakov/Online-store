@@ -1,43 +1,43 @@
 export const sliderItems = [
   {
     id: 1,
-    img: "https://istorm.com.cy/pub/media/images/new_mac_landing/macbook-pro-13-c.png",
+    img: "https://i.ibb.co/xgvm92Q/macbook-pro-13-c.png",
     title: "MacBook Air M2 chip",
     desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
     bg: "f5fafd",
   },
   {
     id: 2,
-    img: "https://istorm.com.cy/pub/media/wysiwyg/video/iphone14pro.jpg",
+    img: "https://i.ibb.co/PQwr7HR/iphone14pro.jpg",
     title: "iPhone 14pro",
     desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
     bg: "fcf1ed",
   },
   {
     id: 3,
-    img: "https://istorm.com.cy/pub/media/catalog/product/cache/290ad8c20ef5080acd76561b48309ba5/w/i/wiz009vfbk_01_1.jpeg",
+    img: "https://i.ibb.co/CvHVzsQ/wiz009vfbk-01-1.jpg",
     title: "Wireless Charger Stand with MagSafe",
     desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
     bg: "fbf0f4",
-  },
+  }, 
 ];
 
 export const categories = [
-  { 
+  {
     id: 1,
-    img: "https://istorm.com.cy/pub/media/images/new_mac_landing/whymac.png",
+    img: "https://i.ibb.co/PNsQHSf/allmbpro.png",
     title: "Mac",
     cat: "Mac",
   },
   {
     id: 2,
-    img: "https://istorm.com.cy/pub/media/images/new_iphone_landing/iphone12.png",
+    img: "https://i.ibb.co/BzCnk5s/iphone12.png",
     title: "iPhone",
     cat: "iPhone",
   },
   {
     id: 3,
-    img: "https://istorm.com.cy/pub/media/images/acc_landing/mac.png",
+    img: "https://i.ibb.co/xhB2HYm/mac.png",
     title: "Accessories",
     cat: "Accessories",
   },
