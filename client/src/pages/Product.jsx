@@ -17,6 +17,7 @@ const Wrapper = styled.div`
   position: relative;
   padding: 50px;
   display: flex;
+  min-height: 630px;
   ${mobile({ padding: "10px", flexDirection: "column" })}
 `;
 

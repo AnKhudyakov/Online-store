@@ -12,6 +12,9 @@ const Container = styled.div`
   position: relative;
   overflow: hidden;
   ${mobile({ display: "none" })}
+  @media (max-width: 600px) {
+    display: none;
+  }
 `;
 
 const Arrow = styled.div`
@@ -49,12 +52,14 @@ const Slide = styled.div`
 `;
 
 const ImgContainer = styled.div`
-  height: 100%;
+  max-height: 100%;
+  max-width: 100%;
   flex: 1;
 `;
 
 const Image = styled.img`
-  height: 100%;
+  max-height: 100%;
+  max-width: 100%;
 `;
 
 const InfoContainer = styled.div`
@@ -105,7 +110,7 @@ const Slider = () => {
               <Title>{item.title}</Title>
               <Desc>{item.desc}</Desc>
               <Link to={`/product/${item._id}`}>
-              <Button>SHOW NOW</Button>
+                <Button>SHOW NOW</Button>
               </Link>
             </InfoContainer>
           </Slide>

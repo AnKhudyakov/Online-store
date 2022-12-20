@@ -1,5 +1,5 @@
 import { Badge } from "@material-ui/core";
-import { Search, ShoppingCartOutlined } from "@material-ui/icons";
+import { Directions, Search, ShoppingCartOutlined } from "@material-ui/icons";
 import React from "react";
 import styled from "styled-components";
 import { mobile } from "../responsive";
@@ -9,6 +9,9 @@ import { logout } from "../redux/userRedux";
 const Container = styled.div`
   height: 60px;
   ${mobile({ height: "50px" })}
+  @media (max-width: 730px) {
+    height: 133px;
+  }
 `;
 
 const Wrapper = styled.div`
@@ -16,7 +19,10 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  ${mobile({ padding: "10px 0px" })}
+  ${mobile({ padding: "10px 0px" })};
+  @media (max-width: 730px) {
+    flex-direction: column;
+  }
 `;
 
 const Left = styled.div`
@@ -54,11 +60,15 @@ const Logo = styled.h1`
   ${mobile({ fontSize: "24px" })}
 `;
 const Right = styled.div`
+  width: 100%;
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   ${mobile({ flex: 2, justifyContent: "center" })}
+  @media (max-width: 730px) {
+    justify-content: space-between;
+  }
 `;
 
 const MenuItem = styled.div`
@@ -70,13 +80,13 @@ const MenuItem = styled.div`
 `;
 
 const Button = styled.button`
-  width: 20%;
+  min-width: 80px;
   border: none;
   padding: 10px 20px;
   background-color: teal;
   color: white;
   cursor: pointer;
-  margin-left: 20px;
+  margin-left: 5%;
   margin-bottom: 10px;
   &:disabled {
     color: green;

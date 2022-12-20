@@ -7,6 +7,12 @@ const Container = styled.div`
   margin: 3px;
   height: 70vh;
   position: relative;
+  @media (max-width: 750px) {
+    height: 50vh;
+  }
+  @media (max-width: 700px) {
+    height: 30vh;
+  }
 `;
 
 const Image = styled.img`
@@ -45,9 +51,9 @@ const Button = styled.button`
 `;
 
 const MyLink = styled(Link)`
-background-color: #eee;
- display: flex;
- align-items: center;
+  background-color: #eee;
+  display: flex;
+  align-items: center;
   position: absolute;
   min-height: 100%;
 `;
