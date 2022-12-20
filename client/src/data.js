@@ -13,6 +13,7 @@ export const sliderItems = [
     title: "iPhone 14pro",
     desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
     bg: "fcf1ed",
+    _id: "63a15965a24f810b81f226bf",
   },
   {
     id: 3,
@@ -20,13 +21,14 @@ export const sliderItems = [
     title: "Wireless Charger Stand with MagSafe",
     desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
     bg: "fbf0f4",
+    _id: "63a15a45a24f810b81f226c0",
   },
 ];
 
 export const categories = [
   {
     id: 1,
-    img: "https://i.ibb.co/PNsQHSf/allmbpro.png",
+    img: "https://i.ibb.co/gP58YkT/whymac.png",
     title: "Mac",
     cat: "Mac",
   },
