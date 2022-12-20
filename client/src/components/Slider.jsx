@@ -7,7 +7,7 @@ import { mobile } from "../responsive";
 
 const Container = styled.div`
   width: 100%;
-  height: 100vh;
+  height: 88vh;
   display: flex;
   position: relative;
   overflow: hidden;
@@ -45,21 +45,24 @@ const Wrapper = styled.div`
 
 const Slide = styled.div`
   width: 100vw;
-  height: 88vh;
+  height: 100%;
   display: flex;
   align-items: center;
   background-color: #${(props) => props.bg};
 `;
 
 const ImgContainer = styled.div`
+  padding-left: 5%;
   max-height: 100%;
   max-width: 100%;
   flex: 1;
 `;
 
 const Image = styled.img`
+object-fit: cover;
+object-position: center;
   max-height: 100%;
-  max-width: 100%;
+  max-width: 80%;
 `;
 
 const InfoContainer = styled.div`

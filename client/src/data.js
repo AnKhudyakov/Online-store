@@ -9,7 +9,7 @@ export const sliderItems = [
   },
   {
     id: 2,
-    img: "https://i.ibb.co/PQwr7HR/iphone14pro.jpg",
+    img: "https://i.ibb.co/h19NQgv/iphone14pro.png",
     title: "iPhone 14pro",
     desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
     bg: "fcf1ed",
@@ -17,7 +17,7 @@ export const sliderItems = [
   },
   {
     id: 3,
-    img: "https://i.ibb.co/CvHVzsQ/wiz009vfbk-01-1.jpg",
+    img: "https://i.ibb.co/TPmcb3v/wiz009vfbk-01-1-2.png",
     title: "Wireless Charger Stand with MagSafe",
     desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
     bg: "fbf0f4",
