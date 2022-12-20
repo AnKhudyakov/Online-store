@@ -57,6 +57,10 @@ const Button = styled.button`
   }
 `;
 
+const MyLink = styled(Link)`
+  margin-top: 10px;
+  color: black;
+`;
 // const Link = styled.a`
 //   margin: 5px 0px;
 //   font-size: 12px;
@@ -96,8 +100,8 @@ const Login = () => {
             LOGIN
           </Button>
           {error && <Error>Something went wrong...</Error>}
-          <Link>DO NOT YOU REMEMBER THE PASSWORD?</Link>
-          <Link href="/register" >CREATE A NEW ACCOUNT</Link>
+          <MyLink>DO NOT YOU REMEMBER THE PASSWORD?</MyLink>
+          <MyLink to="/register">CREATE A NEW ACCOUNT</MyLink>
         </Form>
       </Wrapper>
     </Container>

@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { mobile } from "../responsive";
 import { useForm } from "react-hook-form";
 import { userRequest } from "../requestMethods";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
   width: 100vw;
@@ -47,12 +48,25 @@ const Agreement = styled.span`
 `;
 
 const Button = styled.button`
+  flex: 1;
+  margin: 20px 10px 0px 0px;
   width: 40%;
   border: none;
   padding: 15px 20px;
   background-color: teal;
   color: white;
   cursor: pointer;
+`;
+
+const MyLink = styled(Link)`
+  flex: 1;
+  text-align: center;
+  margin: 20px 10px 0px 0px;
+  width: 40%;
+  padding: 15px 20px;
+  color: white;
+  text-decoration: none;
+  background-color: teal;
 `;
 
 const Register = () => {
@@ -119,6 +133,7 @@ const Register = () => {
             data in accordance with the <b>PRIVACY POLICY</b>
           </Agreement>
           <Button type="submit">CREATE</Button>
+          <MyLink to="/">BACK TO MAIN</MyLink>
         </Form>
       </Wrapper>
     </Container>
