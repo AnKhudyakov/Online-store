@@ -6,7 +6,7 @@ import Navbar from "../components/Navbar";
 import Newsletter from "../components/Newsletter";
 import { mobile } from "../responsive";
 import { useLocation } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { publicRequest } from "../requestMethods";
 import { addProduct } from "../redux/cartRedux";
 import { useDispatch } from "react-redux";
@@ -133,8 +133,16 @@ const Product = () => {
   const [color, setColor] = useState("");
   const [size, setSize] = useState("");
   const dispatch = useDispatch();
+  const wrapper = useRef();
 
   useEffect(() => {
+    
+    window.scrollTo({
+      top: 0,
+      behavior: "auto",
+    });
+
+    wrapper.current.scrollTo = "0px";
     const getProduct = async () => {
       try {
         const res = await publicRequest.get("/products/find/" + id);
@@ -156,7 +164,7 @@ const Product = () => {
     dispatch(addProduct({ ...product, quantity, color, size }));
   };
   return (
-    <Container>
+    <Container ref={wrapper}>
       <Navbar />
       <Announcement />
       <Wrapper>
