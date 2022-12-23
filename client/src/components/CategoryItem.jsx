@@ -51,7 +51,7 @@ const Button = styled.button`
 `;
 
 const MyLink = styled(Link)`
-  background-color: #eee;
+  background-color: #f5fafd;
   display: flex;
   align-items: center;
   position: absolute;
